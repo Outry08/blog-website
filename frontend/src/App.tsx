@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import heroImg from './assets/hero.png';
+import React, { useState } from "react";
+import heroImg from "./assets/hero.png";
 
 export const App: React.FC = () => {
   const [count, setCount] = useState(0);
@@ -27,12 +27,24 @@ export const App: React.FC = () => {
 
       <button
         onClick={async () => {
-          await fetch("http://localhost:3000", {
-            method: "POST"
-          });
+          await fetch("http://localhost:3000", { method: "POST" });
         }}
       >
         FETCH
+      </button>
+      <button
+        onClick={async () => {
+          await fetch("http://localhost:3000/hello", { method: "GET" });
+        }}
+      >
+        HELLO
+      </button>
+      <button
+        onClick={async () => {
+          await fetch("http://localhost:3000/article", { method: "GET" });
+        }}
+      >
+        ARTICLE
       </button>
 
       <div className="ticks"></div>
@@ -107,7 +119,7 @@ export const App: React.FC = () => {
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
-  )
+  );
 };
 
 export default App;

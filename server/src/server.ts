@@ -1,5 +1,6 @@
 import { createServer } from "http";
-import { handler } from "./handler"
+import { handler } from "./handler.js";
+
 
 const port = 3000;
 const server = createServer(handler);
