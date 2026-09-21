@@ -13,4 +13,5 @@ export const LintRules = {
 		"exports": "always-multiline",
 		"functions": "never",
 	}],
+	"indent": ["error", "tab"],
 };
