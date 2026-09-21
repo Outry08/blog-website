@@ -14,4 +14,5 @@ export const LintRules = {
 		"functions": "never",
 	}],
 	"indent": ["error", "tab"],
+	"object-curly-spacing": ["error", "always"],
 };
