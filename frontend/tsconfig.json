@@ -3,5 +3,6 @@
 		"rootDir": "src",
 		"outDir": "dist",
 		"jsx": "preserve",
+		"types": ["node"],
 	}
 }
