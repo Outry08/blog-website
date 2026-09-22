@@ -11,7 +11,7 @@ class ArticleController {
 
 	public getArticle = async (req: Request, res: Response): Promise<void> => {
 		console.log("ARTICLE");
-		res.status(200).send({message:"MESSAGE"});
+		res.status(200).send({ message:"MESSAGE" });
 		console.log(this);
 		this.articleModel.getArticle();
 	};
