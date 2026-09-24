@@ -1,10 +1,11 @@
-import React from "react";
 import NavBar from "./components/navbar";
+import { Outlet } from "react-router";
 
-export const App: React.FC = () => {
+const App: React.FC = () => {
 	return (
 		<>
 			<NavBar />
+			<Outlet />
 		</>
 	);
 };

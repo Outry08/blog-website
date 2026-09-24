@@ -1,8 +1,10 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import styled from "styled-components";
 import tempLogo from "../assets/tempLogo.jpg";
 import { BsFillPersonFill } from "react-icons/bs";
 import Icon from "./utils/icon";
+import { Link } from "react-router";
+import { RowCenter } from "./utils/flex";
 
 const navbarHeightRem = 3.125;
 
@@ -12,7 +14,6 @@ const Bar = styled.div`
 	justify-content: center;
 	background-color: #000000;
 	font-family: Helvetica;
-
 `;
 
 const NavItem = styled.div`
@@ -26,6 +27,7 @@ const NavItem = styled.div`
 	transition: 0.3s;
 	cursor: pointer;
 	padding: 0.625rem;
+	text-decoration: none;
 
 	&:hover {
 		color: #000000;
@@ -33,38 +35,42 @@ const NavItem = styled.div`
 	}
 `;
 
-const NavImage = styled.div`
-	width: ${navbarHeightRem}rem;
-	height: ${navbarHeightRem}rem;
-	line-height: ${navbarHeightRem}rem;
-	font-size: 1.25rem;
-	background-color: #000000;
-	color: #FFFFFF;
-	text-align: center;
-	transition: 0.3s;
-	cursor: pointer;
-	padding: 0.625rem;
+interface NavItemProps {
+	image?: boolean;
+	to: string;
+};
 
-	&:hover {
-		color: #000000;
-		background-color: #FFFFFF;
-	}
-`;
+const NavItemLink: React.FC<PropsWithChildren<NavItemProps>> = ({
+	image=false,
+	to,
+	children,
+}) => {
+	return (
+		<NavItem
+			as={Link}
+			to={to}
+			style={image ? {width: `${navbarHeightRem}rem`, flex: "unset"} : {}}
+		>
+			{children}
+		</NavItem>
+	);
+};
 
 const NavBar: React.FC = () => {
 	return (
 		<Bar style={{ justifyContent: "space-between", gap: `${navbarHeightRem}rem` }}>
-			<NavImage>
+			<NavItemLink to="/" image>
 				<img style={{ height: "100%" }} src={tempLogo} />
-			</NavImage>
-			<Bar style={{ width: "50%" }}>
-				<NavItem>Topics</NavItem>
-				<NavItem>Articles</NavItem>
-				<NavItem>Create</NavItem>
-			</Bar>
-			<NavImage>
+			</NavItemLink>
+			<RowCenter style={{ width: "50%" }}>
+				<NavItemLink to="/topics">Topics</NavItemLink>
+				<NavItemLink to="/articles">Articles</NavItemLink>
+				<NavItemLink to="/create">Create</NavItemLink>
+				<NavItemLink to="/about">About</NavItemLink>
+			</RowCenter>
+			<NavItemLink to="/profile" image>
 				<Icon Icon={BsFillPersonFill} iconProps={{ size: 30 }} />
-			</NavImage>
+			</NavItemLink>
 		</Bar>
 	);
 };
