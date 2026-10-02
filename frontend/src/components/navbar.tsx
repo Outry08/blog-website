@@ -2,9 +2,9 @@ import React, { PropsWithChildren } from "react";
 import styled from "styled-components";
 import tempLogo from "../assets/tempLogo.jpg";
 import { BsFillPersonFill } from "react-icons/bs";
-import Icon from "./utils/icon";
+import Icon from "./utils/Icon";
 import { Link } from "react-router";
-import { RowCenter } from "./utils/flex";
+import Flex from "./utils/Flex";
 
 const navbarHeightRem = 3.125;
 
@@ -49,7 +49,7 @@ const NavItemLink: React.FC<PropsWithChildren<NavItemProps>> = ({
 		<NavItem
 			as={Link}
 			to={to}
-			style={image ? {width: `${navbarHeightRem}rem`, flex: "unset"} : {}}
+			style={image ? { width: `${navbarHeightRem}rem`, flex: "unset" } : {}}
 		>
 			{children}
 		</NavItem>
@@ -62,12 +62,12 @@ const NavBar: React.FC = () => {
 			<NavItemLink to="/" image>
 				<img style={{ height: "100%" }} src={tempLogo} />
 			</NavItemLink>
-			<RowCenter style={{ width: "50%" }}>
+			<Flex dir="row" center style={{ width: "50%" }}>
 				<NavItemLink to="/topics">Topics</NavItemLink>
 				<NavItemLink to="/articles">Articles</NavItemLink>
 				<NavItemLink to="/create">Create</NavItemLink>
 				<NavItemLink to="/about">About</NavItemLink>
-			</RowCenter>
+			</Flex>
 			<NavItemLink to="/profile" image>
 				<Icon Icon={BsFillPersonFill} iconProps={{ size: 30 }} />
 			</NavItemLink>

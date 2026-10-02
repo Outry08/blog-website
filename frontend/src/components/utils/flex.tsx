@@ -1,32 +1,17 @@
 import styled from "styled-components";
 
-const Row = styled.div`
-	display: flex;
-	align-items: center;
-`;
-
-const RowCenter = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`;
-
-const Column = styled.div`
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-`
-
-const ColumnCenter = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-`;
-
-export {
-	Row,
-	RowCenter,
-	Column,
-	ColumnCenter,
+interface FlexProps {
+	dir: "row" | "column";
+	center?: boolean;
+	gap?: number;
 };
+
+const Flex = styled.div<FlexProps>`
+	display: flex;
+	flex-direction: ${props => props.dir};
+	align-items: center;
+	${props => props.center ? "justify-content: center;" : ""}
+	${props => props.gap ? `gap: ${props.gap}rem;` : ""};
+`;
+
+export default Flex;

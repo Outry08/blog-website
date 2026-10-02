@@ -1,4 +1,4 @@
-import NavBar from "./components/navbar";
+import NavBar from "./components/Navbar";
 import { Outlet } from "react-router";
 
 const App: React.FC = () => {
