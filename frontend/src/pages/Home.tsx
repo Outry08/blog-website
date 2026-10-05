@@ -1,10 +1,37 @@
 import styled from "styled-components";
-import Logo from "../assets/tempLogo.jpg";
+import Logo from "../assets/tempLogo2.png";
 import Flex from "../components/utils/Flex";
+import ArticleCard from "../components/ArticleCard";
+import { ArticleCardInfo } from "../types/article";
 
 const LogoImg = styled.img`
 	height: 20rem;
+	margin-right: -50px;
 `;
+
+const sampleArticle: ArticleCardInfo = {
+	imageURL: "/src/assets/tempArticleThumb1.jpg",
+	topic: "Danganronpa",
+	type: "comparison",
+	headline: "Comparing All Aspects of The Main Danganronpa Games",
+	date: new Date("10/03/2026"),
+};
+
+const sampleArticle2: ArticleCardInfo = {
+	imageURL: "/src/assets/tempArticleThumb2.jpg",
+	topic: "Iron Lung",
+	type: "review",
+	headline: "A Review of Markiplier's 'Iron Lung'",
+	date: new Date("10/05/2026"),
+};
+
+const sampleArticle3: ArticleCardInfo = {
+	imageURL: "/src/assets/tempArticleThumb3.jpg",
+	topic: "Halo",
+	type: "ranking",
+	headline: "Ranking All The Mainline Halo Games",
+	date: new Date("10/05/2026"),
+};
 
 const HomePage: React.FC = () => {
 	return (<>
@@ -16,6 +43,16 @@ const HomePage: React.FC = () => {
 			</Flex>
 			<h4>Read all sorts of thoughts and opinions about all sorts of things!</h4>
 			<h2 style={{ width: "100%" }}>Recent Articles:</h2>
+			<Flex dir="row" gap={1}>
+				<div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", width:"100%", gap: "1rem" }}>
+					<ArticleCard articleInfo={sampleArticle} />
+					<ArticleCard articleInfo={sampleArticle2} />
+					<ArticleCard articleInfo={sampleArticle3} />
+				</div>
+				<div style={{ width: "50px", height: "100%", textAlign: "center", border: "2px dashed" }}>
+					READ MORE BOX
+				</div>
+			</Flex>
 		</Flex>
 	</>);
 };

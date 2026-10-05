@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import styled from "styled-components";
-import tempLogo from "../assets/tempLogo.jpg";
+import Logo from "../assets/tempLogo2.png";
 import { BsFillPersonFill } from "react-icons/bs";
 import Icon from "./utils/Icon";
 import { Link } from "react-router";
@@ -33,6 +33,11 @@ const NavItem = styled.div`
 		color: #000000;
 		background-color: #FFFFFF;
 	}
+
+	&:active {
+		transition: 0.1s;
+		border-radius: 4rem;
+	}
 `;
 
 interface NavItemProps {
@@ -60,7 +65,7 @@ const NavBar: React.FC = () => {
 	return (
 		<Bar style={{ justifyContent: "space-between", gap: `${navbarHeightRem}rem` }}>
 			<NavItemLink to="/" image>
-				<img style={{ height: "100%" }} src={tempLogo} />
+				<img style={{ height: "100%" }} src={Logo} />
 			</NavItemLink>
 			<Flex dir="row" center style={{ width: "50%" }}>
 				<NavItemLink to="/topics">Topics</NavItemLink>
