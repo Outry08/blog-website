@@ -13,11 +13,25 @@ h1 {
 h2 {
 	font-size: 2rem;
 }
+
 /*h3 = small subtitles*/
 /*h4 = larger text*/
 h4 {
 	font-weight: normal;
 	font-size: 1.5rem;
+}
+
+/*h5 = smaller title*/
+h5 {
+	font-size: 1rem;
+}
+
+/*h6 = caption (small, grey)*/
+h6 {
+	font-weight: normal;
+	font-style: italic;
+	color: #888888;
+	font-size: 0.75rem;
 }
 
 h1, h2, h3, h4, h5, h6 {

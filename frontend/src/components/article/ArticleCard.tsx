@@ -1,6 +1,7 @@
-import Flex from "./utils/Flex";
+import Flex from "../utils/Flex";
 import styled from "styled-components";
-import { ArticleCardInfo } from "../types/article";
+import { ArticleCardInfo } from "../../types/article";
+import { ArticleTag } from "../utils/Tag";
 
 const CardContainer = styled.div`
 	max-width: 100%;
@@ -51,9 +52,16 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
 		<CardContainer style={{ ...style }}>
 			<Flex dir="column" align="left">
 				<ThumbnailContainer>
+					<ArticleTag type={articleInfo.type} style={{ position: "absolute", margin: "0.5rem" }} />
 					<Thumbnail src={articleInfo.imageURL} />
 				</ThumbnailContainer>
-				<h5 style={{ margin: "0.5rem" }}>{articleInfo.headline}</h5>
+				<div style={{ margin: "0.5rem" }}>
+					<h5>{articleInfo.headline}</h5>
+					<Flex dir="row" between>
+						<h6>{articleInfo.topic}</h6>
+						<h6>{articleInfo.date.toDateString()}</h6>
+					</Flex>
+				</div>
 			</Flex>
 		</CardContainer>
 	);

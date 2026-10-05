@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Logo from "../assets/tempLogo2.png";
 import Flex from "../components/utils/Flex";
-import ArticleCard from "../components/ArticleCard";
+import ArticleCard from "../components/article/ArticleCard";
 import { ArticleCardInfo } from "../types/article";
 
 const LogoImg = styled.img`

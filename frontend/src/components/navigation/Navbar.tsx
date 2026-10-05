@@ -1,10 +1,10 @@
 import React, { PropsWithChildren } from "react";
 import styled from "styled-components";
-import Logo from "../assets/tempLogo2.png";
+import Logo from "../../assets/tempLogo2.png";
 import { BsFillPersonFill } from "react-icons/bs";
-import Icon from "./utils/Icon";
+import Icon from "../utils/Icon";
 import { Link } from "react-router";
-import Flex from "./utils/Flex";
+import Flex from "../utils/Flex";
 
 const navbarHeightRem = 3.125;
 
