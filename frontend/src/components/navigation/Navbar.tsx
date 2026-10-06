@@ -13,7 +13,6 @@ const Bar = styled.div`
 	align-items: center;
 	justify-content: center;
 	background-color: #000000;
-	font-family: Helvetica;
 `;
 
 const NavItem = styled.div`

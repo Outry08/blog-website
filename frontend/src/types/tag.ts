@@ -43,4 +43,5 @@ export const TypeColorRecord: Record<ArticleType, TagColor> = {
 	"comparison": "blue",
 	"review": "red",
 	"opinion": "green",
+	"analysis": "grey",
 };

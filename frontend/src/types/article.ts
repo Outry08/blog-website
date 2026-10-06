@@ -1,4 +1,4 @@
-export type ArticleType = "ranking" | "comparison" | "review" | "opinion";
+export type ArticleType = "ranking" | "comparison" | "review" | "opinion" | "analysis";
 
 export interface ArticleCardInfo {
 	imageURL: string;
