@@ -35,7 +35,7 @@ const sampleArticle3: ArticleCardInfo = {
 
 const HomePage: React.FC = () => {
 	const articles = [sampleArticle, sampleArticle2, sampleArticle3];
-	
+
 	return (<>
 		<Flex dir="column" gap={2} style={{ padding: "1% 2.5%" }}>
 			<Flex dir="row" center>
@@ -51,12 +51,12 @@ const HomePage: React.FC = () => {
 					READ MORE BOX
 				</div>
 			</Flex>
-			<Flex dir="column" gap={0.5} center style={{width: "50%", padding: "5rem", border: "5px solid white", backgroundColor: "#ccccff", borderRadius: "1rem"}}>
+			<Flex dir="column" gap={0.5} center style={{ width: "50%", padding: "5rem", border: "5px solid white", backgroundColor: "#ccccff", borderRadius: "1rem" }}>
 				<h2>Looking For More?</h2>
-				<Flex dir="row" gap={1} style={{height: "10rem"}}>
-					<img src="/src/assets/tempArticleThumb2.jpg" style={{height: "100%"}}/>
-					<img src="/src/assets/tempArticleThumb2.jpg" style={{height: "90%"}}/>
-					<img src="/src/assets/tempArticleThumb2.jpg" style={{height: "50%"}}/>
+				<Flex dir="row" gap={1} style={{ height: "10rem" }}>
+					<img src="/src/assets/tempArticleThumb2.jpg" style={{ height: "100%" }}/>
+					<img src="/src/assets/tempArticleThumb2.jpg" style={{ height: "90%" }}/>
+					<img src="/src/assets/tempArticleThumb2.jpg" style={{ height: "50%" }}/>
 				</Flex>
 				<h5>Take a look at all the topics I've written about!</h5>
 				<div>Sample Button</div>

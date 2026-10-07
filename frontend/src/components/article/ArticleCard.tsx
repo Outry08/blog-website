@@ -50,7 +50,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
 }) => {
 	return (
 		<CardContainer style={{ ...style }}>
-			<Flex dir="column" align="left" between style={{height: "100%"}}>
+			<Flex dir="column" align="left" between style={{ height: "100%" }}>
 				<ThumbnailContainer>
 					<ArticleTag type={articleInfo.type} style={{ position: "absolute", margin: "0.5rem" }} />
 					<Thumbnail src={articleInfo.imageURL} />
