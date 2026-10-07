@@ -6,21 +6,11 @@ import { ArticleTag } from "../utils/Tag";
 const CardContainer = styled.div`
 	max-width: 100%;
 	border-radius: 1.1rem;
-	border: 1px solid #AAAAAA;
 	overflow: hidden;
-	transition: 0.3s;
-	box-shadow: 0 0.3rem 0.3rem #888888;
 
 	&:hover {
 		background-color: #EEEEEE;
-		cursor: pointer;
-	}
-
-	&:active {
-		box-shadow: none;
-		transform: translateY(0.3rem);
-		transition: 0.05s;
-	}
+	}	
 `;
 
 const ThumbnailContainer = styled.div`
@@ -49,19 +39,19 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
 	style,
 }) => {
 	return (
-		<CardContainer style={{ ...style }}>
+		<CardContainer style={{ ...style }} className="shadowBorder shadowButton">
 			<Flex dir="column" align="left" between style={{ height: "100%" }}>
 				<ThumbnailContainer>
 					<ArticleTag type={articleInfo.type} style={{ position: "absolute", margin: "0.5rem" }} />
 					<Thumbnail src={articleInfo.imageURL} />
 				</ThumbnailContainer>
-				<div style={{ margin: "0.5rem" }}>
+				<Flex dir="column" align="left" between style={{ margin: "0.5rem", flexGrow: "1" }}>
 					<h5>{articleInfo.headline}</h5>
 					<Flex dir="row" between>
 						<h6>{articleInfo.topic}</h6>
 						<h6>{articleInfo.date.toDateString()}</h6>
 					</Flex>
-				</div>
+				</Flex>
 			</Flex>
 		</CardContainer>
 	);

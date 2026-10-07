@@ -3,6 +3,7 @@ import Logo from "../assets/tempLogo2.png";
 import Flex from "../components/utils/Flex";
 import { ArticleCardInfo } from "../types/article";
 import ArticleGrid from "../components/article/ArticleGrid";
+import TopicDiv from "../components/page/TopicDiv";
 
 const LogoImg = styled.img`
 	height: 20rem;
@@ -10,6 +11,7 @@ const LogoImg = styled.img`
 `;
 
 const sampleArticle: ArticleCardInfo = {
+	articleID: 1,
 	imageURL: "/src/assets/tempArticleThumb1.jpg",
 	topic: "Danganronpa",
 	type: "comparison",
@@ -18,6 +20,7 @@ const sampleArticle: ArticleCardInfo = {
 };
 
 const sampleArticle2: ArticleCardInfo = {
+	articleID: 2,
 	imageURL: "/src/assets/tempArticleThumb2.jpg",
 	topic: "Iron Lung",
 	type: "review",
@@ -26,6 +29,7 @@ const sampleArticle2: ArticleCardInfo = {
 };
 
 const sampleArticle3: ArticleCardInfo = {
+	articleID: 3,
 	imageURL: "/src/assets/tempArticleThumb3.jpg",
 	topic: "Halo",
 	type: "ranking",
@@ -51,16 +55,8 @@ const HomePage: React.FC = () => {
 					READ MORE BOX
 				</div>
 			</Flex>
-			<Flex dir="column" gap={0.5} center style={{ width: "50%", padding: "5rem", border: "5px solid white", backgroundColor: "#ccccff", borderRadius: "1rem" }}>
-				<h2>Looking For More?</h2>
-				<Flex dir="row" gap={1} style={{ height: "10rem" }}>
-					<img src="/src/assets/tempArticleThumb2.jpg" style={{ height: "100%" }}/>
-					<img src="/src/assets/tempArticleThumb2.jpg" style={{ height: "90%" }}/>
-					<img src="/src/assets/tempArticleThumb2.jpg" style={{ height: "50%" }}/>
-				</Flex>
-				<h5>Take a look at all the topics I've written about!</h5>
-				<div>Sample Button</div>
-			</Flex>
+			<TopicDiv />
+			<div />
 		</Flex>
 	</>);
 };

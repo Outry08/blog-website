@@ -47,3 +47,24 @@ img {
 	-webkit-user-select: none;
 	-ms-user-select: none;
 }
+
+.shadowBorder {
+	border: 1px solid #AAAAAA;
+	box-shadow: 0 0.3rem 0.3rem #888888;
+}
+
+.shadowButton {
+	box-shadow: 0 0.3rem 0.3rem #888888;
+	transition: 0.3s;
+	user-select: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:active {
+		box-shadow: none;
+		transform: translateY(0.3rem);
+		transition: 0.05s;
+	}
+}

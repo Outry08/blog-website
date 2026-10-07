@@ -16,7 +16,12 @@ const ArticleGridBase = styled.div`
 const ArticleGrid: React.FC<ArticleGridProps> = ({ articles }) => {
 	return (
 		<ArticleGridBase>
-			{articles.map(article => <ArticleCard articleInfo={article} />)}
+			{articles.map(article => (
+				<ArticleCard
+					key={article.articleID}
+					articleInfo={article}
+				/>
+			))}
 		</ArticleGridBase>
 	);
 };
