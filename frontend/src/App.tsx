@@ -5,7 +5,7 @@ import { Outlet } from "react-router";
 const App: React.FC = () => {
 	return (<>
 		<NavBar />
-		<div style={{ backgroundColor: "#FFFFFF" }}>
+		<div style={{ color: "#000000", backgroundColor: "#FFFFFF" }}>
 			<Outlet />
 		</div>
 		<Footer />

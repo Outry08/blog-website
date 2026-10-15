@@ -12,7 +12,6 @@ const Bar = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #000000;
 `;
 
 const NavItem = styled.div`
