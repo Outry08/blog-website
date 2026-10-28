@@ -13,9 +13,26 @@ jobs:
       - name: Install Dependencies
         run: npm ci
         working-directory: ./frontend
+      - name: Audit
+        run: npm run audit
+        working-directory: ./frontend
       - name: Lint
         run: npm run lint
+        working-directory: ./frontend
   backend-lint:
     runs-on: ubuntu-latest
     steps:
-      - run: cd server && npm run lint
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+      - name: Install Dependencies
+        run: npm ci
+        working-directory: ./server
+      - name: Audit
+        run: npm run audit
+        working-directory: ./server
+      - name: Lint
+        run: npm run lint
+        working-directory: ./server
