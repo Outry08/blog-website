@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsc-watch --onSuccess \"node dist/express.js\"",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "audit": "npm audit"
   },
   "keywords": [],
   "type": "module",
