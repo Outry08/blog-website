@@ -6,7 +6,7 @@
 	// Keeps your runtime environment stable
 	"compatibility_date": "2026-10-27",
 	"assets": {
-		"directory": "./public",
+		"directory": "./dist",
 		"binding": "not_found_handling"
 	}
 }
