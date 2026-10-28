@@ -12,7 +12,7 @@ const LogoImg = styled.img`
 
 const sampleArticle: ArticleCardInfo = {
 	articleID: 1,
-	imageURL: "/src/assets/tempArticleThumb1.jpg",
+	imageURL: "tempArticleThumb1.jpg",
 	topic: "Danganronpa",
 	type: "comparison",
 	headline: "Comparing All Aspects of The Main Danganronpa Games",
@@ -21,7 +21,7 @@ const sampleArticle: ArticleCardInfo = {
 
 const sampleArticle2: ArticleCardInfo = {
 	articleID: 2,
-	imageURL: "/src/assets/tempArticleThumb2.jpg",
+	imageURL: "tempArticleThumb2.jpg",
 	topic: "Iron Lung",
 	type: "review",
 	headline: "A Review of Markiplier's 'Iron Lung'",
@@ -30,7 +30,7 @@ const sampleArticle2: ArticleCardInfo = {
 
 const sampleArticle3: ArticleCardInfo = {
 	articleID: 3,
-	imageURL: "/src/assets/tempArticleThumb3.jpg",
+	imageURL: "tempArticleThumb3.jpg",
 	topic: "Halo",
 	type: "ranking",
 	headline: "Ranking All The Mainline Halo Games",

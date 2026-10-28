@@ -33,9 +33,9 @@ const TopicDiv: React.FC = () => {
 			<h2>Looking For More?</h2>
 			<Flex dir="row" gap={1} style={{ height: "10rem" }}>
 				{/*Down the line, these images will be the result of a random selection of three existing topics*/}
-				<img src="/src/assets/tempArticleThumb2.jpg" style={{ height: "100%" }} />
-				<img src="/src/assets/tempArticleThumb2.jpg" style={{ height: "90%" }} />
-				<img src="/src/assets/tempArticleThumb2.jpg" style={{ height: "50%" }} />
+				<img src="tempArticleThumb2.jpg" style={{ height: "100%" }} />
+				<img src="tempArticleThumb2.jpg" style={{ height: "90%" }} />
+				<img src="tempArticleThumb2.jpg" style={{ height: "50%" }} />
 			</Flex>
 			<h5>Take a look at all the topics I've written about!</h5>
 			<Button
