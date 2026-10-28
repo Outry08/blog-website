@@ -1,0 +1,12 @@
+name: lint
+on: push
+
+jobs:
+  frontend-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: cd frontend && npm run lint
+  backend-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: cd server && npm run lint
