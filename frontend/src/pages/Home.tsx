@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Logo from "../assets/tempLogo2.png";
+import Logo from "../../public/tempLogo2.png";
 import Flex from "../components/utils/Flex";
 import { ArticleCardInfo } from "../types/article";
 import ArticleGrid from "../components/article/ArticleGrid";

@@ -1,0 +1,12 @@
+{
+	// Connects your IDE to Cloudflare's official type hints
+	"$schema": "node_modules/wrangler/config-schema.json",
+	// Choose a unique deployment name for your project
+	"name": "blog-website",
+	// Keeps your runtime environment stable
+	"compatibility_date": "2026-10-27",
+	"assets": {
+		"directory": "./public",
+		"binding": "not_found_handling"
+	}
+}

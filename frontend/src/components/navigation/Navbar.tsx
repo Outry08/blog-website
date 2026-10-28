@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react";
 import styled from "styled-components";
-import Logo from "../../assets/tempLogo2.png";
+import Logo from "../../../public/tempLogo2.png";
 import { BsFillPersonFill } from "react-icons/bs";
 import Icon from "../utils/Icon";
 import { Link } from "react-router";
