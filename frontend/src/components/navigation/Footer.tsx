@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
 			}}
 			between
 		>
-			<Flex dir="row" between center style={{width: "50%"}}>
+			<Flex dir="row" between center style={{ width: "50%" }}>
 				<h2>Thanks For<br />Reading!</h2>
 				<LinkList>
 					<li>ABOUT</li>
