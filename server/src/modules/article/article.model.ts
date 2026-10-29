@@ -1,7 +1,7 @@
 class ArticleModel {
 
 	public constructor() {
-
+		(() => {})();
 	}
 
 	public getArticle = async () => {
