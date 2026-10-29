@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ColorSets, TagColor, TagColorSet, TypeColorRecord } from "../../types/tag";
+import { ColorSets, TagColor, TypeColorRecord } from "../../types/tag";
 import { ArticleType } from "../../types/article";
 
 interface TransientColorSet {
