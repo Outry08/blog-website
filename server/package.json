@@ -11,6 +11,7 @@
   "keywords": [],
   "type": "module",
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261029.1",
     "@eslint/js": "^10.0.1",
     "@tsconfig/node20": "^20.1.10",
     "@types/express": "^5.0.6",
@@ -25,5 +26,13 @@
     "typescript": "^6.0.0",
     "typescript-eslint": "^8.70.0",
     "wrangler": "^4.155.0"
+  },
+  "dependencies": {
+    "cloudflare": "^7.3.0"
+  },
+  "allowScripts": {
+    "esbuild": true,
+    "fsevents": true,
+    "workerd": true
   }
 }
