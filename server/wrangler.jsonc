@@ -1,0 +1,17 @@
+{
+	"name": "blog-website-server",
+	"main": "src/express.ts",
+	"compatibility_date": "2026-10-29",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"d1_databases": [
+		{
+			"binding": "blog_db",
+			"database_name": "blog-db",
+			"database_id": "ec718db7-c739-4d75-81c9-afd2bc460ab1",
+			"remote": true
+		}
+	],
+	"previews": {}
+}
