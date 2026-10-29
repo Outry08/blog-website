@@ -40,14 +40,14 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
 }) => {
 	return (
 		<CardContainer style={{ ...style }} className="shadowBorder shadowButton">
-			<Flex dir="column" align="left" between style={{ height: "100%" }}>
+			<Flex $dir="column" $align="left" $between style={{ height: "100%" }}>
 				<ThumbnailContainer>
 					<ArticleTag type={articleInfo.type} style={{ position: "absolute", margin: "0.5rem" }} />
 					<Thumbnail src={articleInfo.imageURL} />
 				</ThumbnailContainer>
-				<Flex dir="column" align="left" between style={{ margin: "0.5rem", flexGrow: "1" }}>
+				<Flex $dir="column" $align="left" $between style={{ margin: "0.5rem", flexGrow: "1" }}>
 					<h5>{articleInfo.headline}</h5>
-					<Flex dir="row" between>
+					<Flex $dir="row" $between>
 						<h6>{articleInfo.topic}</h6>
 						<h6>{articleInfo.date.toDateString()}</h6>
 					</Flex>

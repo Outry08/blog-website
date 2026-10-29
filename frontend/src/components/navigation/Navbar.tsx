@@ -1,6 +1,5 @@
 import React, { PropsWithChildren } from "react";
 import styled from "styled-components";
-import Logo from "../../../public/tempLogo2.png";
 import { BsFillPersonFill } from "react-icons/bs";
 import Icon from "../utils/Icon";
 import { Link } from "react-router";
@@ -63,9 +62,9 @@ const NavBar: React.FC = () => {
 	return (
 		<Bar style={{ justifyContent: "space-between", gap: `${navbarHeightRem}rem` }}>
 			<NavItemLink to="/" image>
-				<img style={{ height: "100%" }} src={Logo} />
+				<img style={{ height: "100%" }} src="tempLogo2.png" />
 			</NavItemLink>
-			<Flex dir="row" center style={{ width: "50%" }}>
+			<Flex $dir="row" $center style={{ width: "50%" }}>
 				<NavItemLink to="/topics">Topics</NavItemLink>
 				<NavItemLink to="/articles">Articles</NavItemLink>
 				<NavItemLink to="/create">Create</NavItemLink>

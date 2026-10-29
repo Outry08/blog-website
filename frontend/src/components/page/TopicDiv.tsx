@@ -19,9 +19,9 @@ const TopicDiv: React.FC = () => {
 
 	return (
 		<Flex
-			dir="column"
-			gap={0.5}
-			center
+			$dir="column"
+			$gap={0.5}
+			$center
 			style={{
 				width: "50%",
 				padding: "3rem",
@@ -31,7 +31,7 @@ const TopicDiv: React.FC = () => {
 			className="shadowBorder"
 		>
 			<h2>Looking For More?</h2>
-			<Flex dir="row" gap={1} style={{ height: "10rem" }}>
+			<Flex $dir="row" $gap={1} style={{ height: "10rem" }}>
 				{/*Down the line, these images will be the result of a random selection of three existing topics*/}
 				<img src="tempArticleThumb2.jpg" style={{ height: "100%" }} />
 				<img src="tempArticleThumb2.jpg" style={{ height: "90%" }} />

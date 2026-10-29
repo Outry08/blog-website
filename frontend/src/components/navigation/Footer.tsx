@@ -4,15 +4,15 @@ import LinkList from "../utils/LinkList";
 const Footer: React.FC = () => {
 	return (
 		<Flex
-			dir="column"
+			$dir="column"
 			style={{
 				height: "8rem",
 				color: "white",
 				padding: "2rem 5rem 0.5rem",
 			}}
-			between
+			$between
 		>
-			<Flex dir="row" between center style={{ width: "50%" }}>
+			<Flex $dir="row" $between $center style={{ width: "50%" }}>
 				<h2>Thanks For<br />Reading!</h2>
 				<LinkList>
 					<li>ABOUT</li>
