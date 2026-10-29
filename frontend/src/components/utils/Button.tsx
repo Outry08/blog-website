@@ -2,25 +2,25 @@ import { Color } from "color-core";
 import styled from "styled-components";
 
 interface BaseButtonProps {
-	textColor: string;
-	backColor: string;
-	hoverColor: string;
-	font: number;
-	bold: boolean;
-	padding: string;
+	$textColor: string;
+	$backColor: string;
+	$hoverColor: string;
+	$font: number;
+	$bold: boolean;
+	$padding: string;
 }
 
 const BaseButton = styled.div.attrs({ className: "shadowButton" })<BaseButtonProps>`
-	padding: ${props => props.padding};
-	font-size: ${props => props.font}rem;
-	color: ${props => props.textColor};
-	background-color: ${props => props.backColor};
+	padding: ${props => props.$padding};
+	font-size: ${props => props.$font}rem;
+	color: ${props => props.$textColor};
+	background-color: ${props => props.$backColor};
 	border: 3px solid;
 	border-radius: 0.5rem;
-	${props => props.bold ? "font-weight: bold;" : ""}
+	${props => props.$bold ? "font-weight: bold;" : ""}
 
 	&:hover {
-		background-color: ${props => props.hoverColor};
+		background-color: ${props => props.$hoverColor};
 	}
 `;
 
@@ -53,12 +53,12 @@ const Button: React.FC<ButtonProps> = ({
 	return (
 		<BaseButton
 			onClick={onClick}
-			textColor={textColor}
-			backColor={backColor}
-			hoverColor={hoverColor.toHex()}
-			font={font}
-			bold={bold}
-			padding={`${paddingV}rem ${paddingH}rem`}
+			$textColor={textColor}
+			$backColor={backColor}
+			$hoverColor={hoverColor.toHex()}
+			$font={font}
+			$bold={bold}
+			$padding={`${paddingV}rem ${paddingH}rem`}
 		>
 			{text}
 		</BaseButton>
