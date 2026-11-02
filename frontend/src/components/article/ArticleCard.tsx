@@ -39,7 +39,11 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
 	style,
 }) => {
 	return (
-		<CardContainer style={{ ...style }} className="shadowBorder shadowButton">
+		<CardContainer style={{ ...style }} className="shadowBorder shadowButton"
+			onClick={async () => {
+				await fetch(`${import.meta.env.VITE_SERVER_URL}/hello`);
+			}}
+		>
 			<Flex $dir="column" $align="left" $between style={{ height: "100%" }}>
 				<ThumbnailContainer>
 					<ArticleTag type={articleInfo.type} style={{ position: "absolute", margin: "0.5rem" }} />

@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 .wrangler
+worker-configuration.d.ts
+.env
 
 # Editor directories and files
 .vscode/*
