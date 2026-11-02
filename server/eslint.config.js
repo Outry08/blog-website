@@ -7,7 +7,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import { LintRules } from "../lint-rules.js";
 
 export default defineConfig([
-	globalIgnores(["dist", "node_modules"]),
+	globalIgnores(["dist", "node_modules", "*.d.ts"]),
 	{
 		files: ["**/*.{ts,tsx,js}"],
 		extends: [

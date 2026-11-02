@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx wrangler dev",
+    "dev": "npx wrangler dev --port 3000",
     "lint": "eslint .",
     "audit": "npm audit"
   },

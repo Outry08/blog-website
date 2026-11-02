@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "audit": "npm audit",
     "preview": "vite preview",
-    "cf:dev": "npm run build && npx wrangler dev"
+    "cf:dev": "npm run build && npx wrangler dev --port 4000"
   },
   "dependencies": {
     "@react-router/dev": "^7.18.4",

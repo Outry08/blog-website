@@ -1,5 +1,7 @@
+import { env } from "cloudflare:workers";
+
 export const CORSHeaders = {
-	"Access-Control-Allow-Origin": process.env.CLIENT_URL,
+	"Access-Control-Allow-Origin": env.CLIENT_URL,
 	"Access-Control-Allow-Methods": "GET, PUT, POST, DELETE",
 };
 
