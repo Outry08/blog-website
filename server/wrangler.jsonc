@@ -10,13 +10,22 @@
 			"binding": "blog_db",
 			"database_name": "blog-db",
 			"database_id": "ec718db7-c739-4d75-81c9-afd2bc460ab1",
-			"remote": true
+			"remote": false
 		}
 	],
-	"previews": {},
+	"previews": {
+		"d1_databases": [
+			{
+				"binding": "blog_db",
+				"database_name": "preview-blog-db",
+				"database_id": "4a9940f3-17f9-40b8-9255-b47a52d4b884"
+			}
+		]
+	},
 	"observability": {
+		"enabled": true,
 		"logs": {
-			"enabled": false,
+			"enabled": true,
 			"invocation_logs": true
 		}
 	}
