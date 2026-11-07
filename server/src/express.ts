@@ -15,12 +15,12 @@ app.use((req, res, next) => {
 app.get("/api/hello", async (req, res) => {
 	console.log("YEET");
 	try {
-		const {results} = await env.blog_db.prepare("INSERT INTO Articles (headline) VALUES('Test Article')").run();
+		const { results } = await env.blog_db.prepare("INSERT INTO Articles (headline) VALUES('Test Article')").run();
+		res.status(200).send(`Hello World! ${results}`);
 	} catch (e) {
-		console.log(e)
-		res.status(500).send("Error executing db command")
+		console.error(e);
+		res.status(500).send("Error executing db command");
 	}
-	res.status(200).send("Hello World!");
 });
 
 app.use("/api/article", ArticleRouter);
