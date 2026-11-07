@@ -18,8 +18,8 @@ app.get("/api/hello", async (req, res) => {
 		const { results } = await env.blog_db.prepare("INSERT INTO Articles (headline) VALUES('Test Article')").run();
 		res.status(200).send(`Hello World! ${results}`);
 	} catch (e) {
-		console.error(e);
-		res.status(500).send("Error executing db command");
+		console.log(e);
+		res.status(500).send(`Error executing db command: ${e}`);
 	}
 });
 
