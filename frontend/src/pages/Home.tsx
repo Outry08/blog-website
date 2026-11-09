@@ -3,41 +3,27 @@ import Flex from "../components/utils/Flex";
 import { ArticleCardInfo } from "../types/article";
 import ArticleGrid from "../components/article/ArticleGrid";
 import TopicDiv from "../components/page/TopicDiv";
+import { useEffect, useState } from "react";
+import { fetchTopNArticles } from "../services/article.service";
 
 const LogoImg = styled.img`
 	height: 20rem;
 	margin-right: -50px;
 `;
 
-const sampleArticle: ArticleCardInfo = {
-	articleID: 1,
-	imageURL: "tempArticleThumb1.jpg",
-	topic: "Danganronpa",
-	type: "comparison",
-	headline: "Comparing All Aspects of The Main Danganronpa Games",
-	date: new Date("10/03/2026"),
-};
-
-const sampleArticle2: ArticleCardInfo = {
-	articleID: 2,
-	imageURL: "tempArticleThumb2.jpg",
-	topic: "Iron Lung",
-	type: "review",
-	headline: "A Review of Markiplier's 'Iron Lung'",
-	date: new Date("10/05/2026"),
-};
-
-const sampleArticle3: ArticleCardInfo = {
-	articleID: 3,
-	imageURL: "tempArticleThumb3.jpg",
-	topic: "Halo",
-	type: "ranking",
-	headline: "Ranking All The Mainline Halo Games",
-	date: new Date("10/05/2026"),
-};
+const numArticles = 3;
 
 const HomePage: React.FC = () => {
-	const articles = [sampleArticle, sampleArticle2, sampleArticle3];
+	const [articles, setArticles] = useState<ArticleCardInfo[]>([]);
+
+	useEffect(() => {
+		const fetchArticles = async () => {
+			const topArticles = await fetchTopNArticles(numArticles);
+			setArticles(topArticles);
+		};
+
+		fetchArticles();
+	}, []);
 
 	return (<>
 		<Flex $dir="column" $gap={2} style={{ padding: "1% 2.5%" }}>
@@ -49,7 +35,7 @@ const HomePage: React.FC = () => {
 			<h4>Read all sorts of thoughts and opinions about all sorts of things!</h4>
 			<h2 style={{ width: "100%" }}>Recent Articles:</h2>
 			<Flex $dir="row" $gap={1}>
-				<ArticleGrid articles={articles} />
+				<ArticleGrid articles={articles} minCols={numArticles} maxCols={numArticles} />
 				<div style={{ width: "50px", height: "100%", textAlign: "center", border: "2px dashed" }}>
 					READ MORE BOX
 				</div>

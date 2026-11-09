@@ -10,10 +10,23 @@ class ArticleController {
 	}
 
 	public getArticle = async (req: Request, res: Response): Promise<void> => {
-		console.log("ARTICLE");
-		res.status(200).send({ message:"MESSAGE" });
-		console.log(this);
-		this.articleModel.getArticle();
+		try {
+			const articleID = Number(req.params.articleID);
+			const article = await this.articleModel.getArticle(articleID);
+			res.status(200).send({ article: article });
+		} catch (e) {
+			res.status(500).send(`Failed to retrieve article: ${e}`);
+		}
+	};
+
+	public getArticles = async (req: Request, res: Response): Promise<void> => {
+		try {
+			const top = Number(req.query.top);
+			const articles = await this.articleModel.getArticles(top);
+			res.status(200).send({ articles: articles });
+		} catch (e) {
+			res.status(500).send(`Failed to retrieve articles: ${e}`);
+		}
 	};
 
 }

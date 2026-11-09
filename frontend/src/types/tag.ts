@@ -1,5 +1,3 @@
-import { ArticleType } from "./article";
-
 export type TagColor = "red" | "green" | "yellow" | "blue" | "black" | "white" | "grey";
 
 export interface TagColorSet {
@@ -36,12 +34,4 @@ export const ColorSets: Record<TagColor, TagColorSet> = {
 		"background": "#cccccc",
 		"text": "#000000",
 	},
-};
-
-export const TypeColorRecord: Record<ArticleType, TagColor> = {
-	"ranking": "yellow",
-	"comparison": "blue",
-	"review": "red",
-	"opinion": "green",
-	"analysis": "grey",
 };

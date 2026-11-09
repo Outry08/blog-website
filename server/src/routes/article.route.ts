@@ -4,6 +4,7 @@ import ArticleController from "../modules/article/article.controller.js";
 const ArticleRouter = express.Router();
 const articleController = new ArticleController();
 
-ArticleRouter.get("/", articleController.getArticle);
+ArticleRouter.get("/:articleID", articleController.getArticle);
+ArticleRouter.get("/", articleController.getArticles);
 
 export default ArticleRouter;
