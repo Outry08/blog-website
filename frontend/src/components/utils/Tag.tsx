@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ColorSets, TagColor, TypeColorRecord } from "../../types/tag";
+import { ColorSets, TagColor } from "../../types/tag";
 import { ArticleType } from "../../types/article";
 
 interface TransientColorSet {
@@ -49,11 +49,11 @@ export const ArticleTag: React.FC<ArticleTagProps> = ({
 }) => {
 	return (
 		<TagDiv
-			$background={ColorSets[TypeColorRecord[type]].background}
-			$text={ColorSets[TypeColorRecord[type]].text}
+			$background={ColorSets[type.tagColor].background}
+			$text={ColorSets[type.tagColor].text}
 			style={{ textTransform: "capitalize", ...style }}
 		>
-			{type}
+			{type.name}
 		</TagDiv>
 	);
 };

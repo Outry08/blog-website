@@ -2,6 +2,7 @@ import Flex from "../utils/Flex";
 import styled from "styled-components";
 import { ArticleCardInfo } from "../../types/article";
 import { ArticleTag } from "../utils/Tag";
+import { fetchArticle } from "../../services/article.service";
 
 const CardContainer = styled.div`
 	max-width: 100%;
@@ -41,7 +42,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
 	return (
 		<CardContainer style={{ ...style }} className="shadowBorder shadowButton"
 			onClick={async () => {
-				await fetch(`${import.meta.env.VITE_SERVER_URL}/hello`);
+				await fetchArticle(articleInfo.articleID);
 			}}
 		>
 			<Flex $dir="column" $align="left" $between style={{ height: "100%" }}>
@@ -53,7 +54,11 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
 					<h5>{articleInfo.headline}</h5>
 					<Flex $dir="row" $between>
 						<h6>{articleInfo.topic}</h6>
-						<h6>{articleInfo.date.toDateString()}</h6>
+						<h6>{
+							articleInfo.datePublished
+								? articleInfo.datePublished.toDateString()
+								: "-----------------"
+						}</h6>
 					</Flex>
 				</Flex>
 			</Flex>

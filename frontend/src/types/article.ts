@@ -1,4 +1,9 @@
-export type ArticleType = "ranking" | "comparison" | "review" | "opinion" | "analysis";
+import { TagColor } from "./tag";
+
+export interface ArticleType {
+	name: string,
+	tagColor: TagColor,
+}
 
 export interface ArticleCardInfo {
 	articleID: number;
@@ -6,5 +11,5 @@ export interface ArticleCardInfo {
 	topic: string; //Franchise article is about
 	type: ArticleType; //Type of article i.e. review, ranking, comparison, etc.
 	headline: string;
-	date: Date;
+	datePublished: Date | null;
 };
